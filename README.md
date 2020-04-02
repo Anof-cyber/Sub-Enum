@@ -16,13 +16,13 @@ Sub Enum use multiple sources to find subdomain to get much better output.
 - go 
 
 ```
-chmod +x installer.sh.
-sudo ./installer.sh`.
+chmod +x installer.sh
+sudo ./installer.sh`
 ```
 # Usage
 ```
-git clone https://github.com/Anof-cyber/Sub-Enum.
-cd Sub-Enum.
-chmod +x sub-enum.sh.
-sudo ./sub-enum.sh.
+git clone https://github.com/Anof-cyber/Sub-Enum
+cd Sub-Enum
+chmod +x sub-enum.sh
+sudo ./sub-enum.sh
 ````
