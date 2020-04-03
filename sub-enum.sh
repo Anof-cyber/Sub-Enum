@@ -11,6 +11,11 @@ Ascii () {
 		printf "\e[1;33m  Auto Subdomain Enumeration | Creator: @Ano_F_ (Twitter)\e[0m\n"
 }
 
+if [[ "$(id -u)" -ne 0 ]]; then
+   printf "\e[1;91m Run this program as root!\n\e[0m"
+   exit 1
+fi
+
 check_requirement () {
 			command -v python > /dev/null 2>&1 || { echo >&2 "Python is not installed yet | Run ./installer.sh. exit."; exit 1; }
 			command -v go > /dev/null 2>&1 || { echo >&2 "go is not installed yet. | Run ./installer.sh. exit."; exit 1; }
