@@ -29,6 +29,7 @@ check_requirement () {
 user_input () {
 		read -p $'\n\e[1;92m enter the domain name: \e[0m' domain
 		read -p $'\e[1;92m enter the name of output file(.txt): \e[0m'  file
+		echo -e "\e[1;92m Subbrute will take time to complete: \e[0m"
 		read -p $'\e[1;92m Do you want to use subbrute (y/n): \e[0m' subbrutes
 }
 
