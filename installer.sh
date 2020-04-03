@@ -1,28 +1,12 @@
 #!/bin/bash
 
-echo  -e "\n\e[1;91m [-] installing sed \e[0m"
-apt-get -y install sed
-echo -e "\n\e[1;33m [-] installation is finished \e[0m"
+if [[ "$(id -u)" -ne 0 ]]; then
+   printf "\e[1;91m Run this program as root!\n\e[0m"
+   exit 1
+fi
 
-
-echo  -e "\n\e[1;91m [-] installing curl \e[0m"
-apt-get -y install curl
-echo -e "\n\e[1;33m [-] installation is finished \e[0m"
-
-
-echo  -e "\n\e[1;91m [-] installing golang \e[0m"
-sudo apt-get -y install golang
-echo -e "\n\e[1;33m [-] installation is finished \e[0m"
-
-
-echo  -e "\n\e[1;91m [-] installing python \e[0m"
-sudo apt-get -y install python
-sudo apt-get -y install python-pip
-echo -e "\n\e[1;33m [-] installation is finished \e[0m"
-
-
-echo  -e "\n\e[1;91m [-] installing jq \e[0m"
-sudo apt-get -y install jq
+echo  -e "\n\e[1;91m [-] installing sed, curl, jq, golan and python\e[0m"
+apt-get -y install sed curl golang python python-pip jq
 echo -e "\n\e[1;33m [-] installation is finished \e[0m"
 
 
